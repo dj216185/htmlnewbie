@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learn HTML the Fun Way! 🎈</title>
+
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Prism (colourful code) -->
+<link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-coy.css" rel="stylesheet">
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+
+<style>
+  body{background:#fffbf5;font-family:system-ui,Segoe UI,Helvetica,sans-serif;}
+  header{background:linear-gradient(45deg,#ff9a9e,#fad0c4 70%);color:#222}
+  h2>span{font-size:1.4rem}
+  .code-box{background:#fff;border:2px dashed #ffb703;border-radius:8px;padding:1rem}
+  .output-pane{background:#fff;border:2px solid #48cae4;border-radius:8px;padding:1rem}
+  .didyouknow{background:#fff3bf;border-left:6px solid #ffd60a;border-radius:6px;padding:.75rem;margin-top:1rem}
+  .play-btn{background:#00b4d8;border:none;color:#fff;padding:.4rem .8rem;border-radius:6px}
+  .play-btn:hover{background:#0096c7}
+  footer{background:#222;color:#fff}
+</style>
+</head>
+<body>
+
+<header class="py-4 text-center">
+  <h1 class="display-5 fw-bold">HTML Adventure 🚀</h1>
+  <p class="lead">Build web pages, one colourful brick at a time.</p>
+</header>
+
+<div class="container my-5">
+
+<!-- 1 BASICS -->
+<section id="basics" class="mb-5">
+  <h2>1&nbsp;·&nbsp;Your Very First Web Page <span>🏠</span></h2>
+  <div class="row">
+    <div class="col-lg-6">
+      <pre class="language-html code-box"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My Cool Site&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, world!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+    <div class="col-lg-6 output-pane">
+      <h1>Hello, world!</h1>
+    </div>
+  </div>
+  <div class="didyouknow">
+    <strong>Did you know?</strong> The line <code>&lt;!DOCTYPE html&gt;</code> is like telling the browser,  
+    “Hey, I’m speaking modern HTML!” It isn’t shown on the page.
+  </div>
+</section>
+
+<!-- 2 TEXT -->
+<section id="text" class="mb-5">
+  <h2>2&nbsp;·&nbsp;Making Words Pop <span>🖍️</span></h2>
+  <div class="row">
+    <div class="col-lg-6">
+<pre class="language-html code-box"><code>&lt;h2&gt;I love pizza&lt;/h2&gt;
+&lt;p&gt;Pizza is &lt;strong&gt;awesome&lt;/strong&gt; and 
+&lt;em&gt;cheesy&lt;/em&gt;!&lt;/p&gt;</code></pre>
+    </div>
+    <div class="col-lg-6 output-pane">
+      <h2>I love pizza</h2>
+      <p>Pizza is <strong>awesome</strong> and <em>cheesy</em>!</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3 IMAGES & LINKS -->
+<section id="media" class="mb-5">
+  <h2>3&nbsp;·&nbsp;Pictures &amp; Links <span>🖼️🔗</span></h2>
+  <div class="row">
+    <div class="col-lg-6">
+<pre class="language-html code-box"><code>&lt;a href="https://nasa.gov"&gt;Visit NASA&lt;/a&gt;
+&lt;br&gt;
+&lt;img src="https://picsum.photos/120"
+     alt="Random picture"&gt;</code></pre>
+    </div>
+    <div class="col-lg-6 output-pane text-center">
+      <a href="https://nasa.gov" target="_blank">Visit NASA</a><br>
+      <img src="https://picsum.photos/120" alt="Random picture">
+    </div>
+  </div>
+</section>
+
+<!-- 4 LISTS -->
+<section id="lists" class="mb-5">
+  <h2>4&nbsp;·&nbsp;Lists Keep Things Tidy <span>📋</span></h2>
+  <div class="row">
+    <div class="col-lg-6">
+<pre class="language-html code-box"><code>&lt;ol&gt;
+  &lt;li&gt;Wake up&lt;/li&gt;
+  &lt;li&gt;Brush teeth&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Mango&lt;/li&gt;
+  &lt;li&gt;Apple&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+    </div>
+    <div class="col-lg-6 output-pane">
+      <ol><li>Wake up</li><li>Brush teeth</li></ol>
+      <ul><li>Mango</li><li>Apple</li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- 5 TABLES -->
+<section id="tables" class="mb-5">
+  <h2>5&nbsp;·&nbsp;Fantastic Tables <span>🍫</span></h2>
+  <p>Tables are like spreadsheets inside a web page.</p>
+  <div class="row">
+    <div class="col-lg-6">
+<pre class="language-html code-box"><code>&lt;table border="1"&gt;
+  &lt;caption&gt;Chocolate Scores&lt;/caption&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Brand&lt;/th&gt;
+    &lt;th&gt;Yum Score&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Dairy Wow&lt;/td&gt;&lt;td&gt;9&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Dark Blast&lt;/td&gt;&lt;td&gt;8&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+    </div>
+    <div class="col-lg-6 output-pane">
+      <table border="1">
+        <caption>Chocolate Scores</caption>
+        <tr><th>Brand</th><th>Yum&nbsp;Score</th></tr>
+        <tr><td>Dairy&nbsp;Wow</td><td>9</td></tr>
+        <tr><td>Dark&nbsp;Blast</td><td>8</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="didyouknow">
+    <strong>Did you know?</strong> You can add <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>
+    and <code>&lt;tfoot&gt;</code> parts to big tables so screen-readers understand them better.
+  </div>
+</section>
+
+<!-- 6 FORMS & ENTITIES -->
+<section id="forms" class="mb-5">
+  <h2>6&nbsp;·&nbsp;Talk to the Page (Forms) <span>📝</span></h2>
+  <p>With forms, people can send you information.</p>
+  <div class="row">
+    <div class="col-lg-6">
+<pre class="language-html code-box"><code>&lt;form&gt;
+  Name: &lt;input name="name" required&gt;&lt;br&gt;
+  Favourite emoji: &lt;input name="emoji" value="😎"&gt;&lt;br&gt;
+  &lt;button&gt;Send!&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+    </div>
+    <div class="col-lg-6 output-pane">
+      <form>
+        Name: <input name="name" required><br>
+        Favourite emoji: <input name="emoji" value="😎"><br>
+        <button>Send!</button>
+      </form>
+    </div>
+  </div>
+
+  <h5 class="mt-4">Character&nbsp;Entities (special symbols)</h5>
+  <p class="output-pane">
+    &amp;copy; → © &nbsp;&nbsp;
+    &amp;hearts; → ♥ &nbsp;&nbsp;
+    &amp;nbsp; → (non-breaking space)
+  </p>
+</section>
+
+<!-- 7 PLAYGROUND -->
+<section id="play" class="mb-5">
+  <h2>7&nbsp;·&nbsp;✨ Try It Yourself!</h2>
+  <p>Type any HTML below and click <strong>Run!</strong></p>
+  <textarea id="playInput" class="form-control" rows="6">&lt;h3&gt;I made this!&lt;/h3&gt;
+&lt;p&gt;Change the text then hit Run.&lt;/p&gt;</textarea>
+  <button class="mt-2 play-btn" onclick="runPlayground()">Run ▶️</button>
+  <div class="output-pane mt-3">
+    <iframe id="playFrame" style="width:100%;height:150px;border:0;"></iframe>
+  </div>
+</section>
+
+<!-- 8 QUIZ -->
+<section id="quiz">
+  <h2>8&nbsp;·&nbsp;Quick Quiz <span>🧠</span></h2>
+  <p>Choose the right answer, then press <strong>Check Answers</strong>.</p>
+
+  <form id="quizForm" class="mb-3">
+
+    <!-- Q1 -->
+    <p>1. Which tag makes bold/important text?</p>
+    <label><input type="radio" name="q1" value="A"> &lt;em&gt;</label><br>
+    <label><input type="radio" name="q1" value="B"> &lt;strong&gt;</label><br>
+    <label><input type="radio" name="q1" value="C"> &lt;img&gt;</label><br><br>
+
+    <!-- Q2 -->
+    <p>2. What tag wraps the part we see on the page?</p>
+    <label><input type="radio" name="q2" value="A"> &lt;head&gt;</label><br>
+    <label><input type="radio" name="q2" value="B"> &lt;body&gt;</label><br>
+    <label><input type="radio" name="q2" value="C"> &lt;title&gt;</label><br><br>
+
+    <!-- Q3 -->
+    <p>3. Which pair creates a numbered list?</p>
+    <label><input type="radio" name="q3" value="A"> &lt;ul&gt; &lt;/ul&gt;</label><br>
+    <label><input type="radio" name="q3" value="B"> &lt;ol&gt; &lt;/ol&gt;</label><br>
+    <label><input type="radio" name="q3" value="C"> &lt;li&gt; &lt;/li&gt;</label><br><br>
+
+    <!-- Q4 -->
+    <p>4. Inside a table, &lt;th&gt; stands for…?</p>
+    <label><input type="radio" name="q4" value="A"> Table Hero</label><br>
+    <label><input type="radio" name="q4" value="B"> Table Header</label><br>
+    <label><input type="radio" name="q4" value="C"> Tiny House</label><br><br>
+
+    <!-- Q5 -->
+    <p>5. Which tag links to another website?</p>
+    <label><input type="radio" name="q5" value="A"> &lt;a&gt;</label><br>
+    <label><input type="radio" name="q5" value="B"> &lt;link&gt;</label><br>
+    <label><input type="radio" name="q5" value="C"> &lt;href&gt;</label><br><br>
+
+    <button type="button" class="play-btn" onclick="checkQuiz()">Check Answers ✅</button>
+  </form>
+  <div id="quizResult" class="h4"></div>
+</section>
+
+</div><!-- /container -->
+
+<footer class="text-center py-4">
+  Built with ❤️ by Devesh – 
+  <a href="mailto:jalukadevesh7@gmail.com">jalukadevesh7@gmail.com</a>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+/* Playground */
+function runPlayground(){
+  const code=document.getElementById('playInput').value;
+  document.getElementById('playFrame').srcdoc=code;
+}
+
+/* Quiz */
+function checkQuiz(){
+  const answers={q1:"B",q2:"B",q3:"B",q4:"B",q5:"A"};
+  let score=0,total=5;
+  for(const key in answers){
+    const marked=document.querySelector('input[name="'+key+'"]:checked');
+    if(marked && marked.value===answers[key]) score++;
+  }
+  document.getElementById('quizResult').textContent=
+    score===5 ? "🌟 Perfect!" : "You scored "+score+" / "+total+".";
+}
+</script>
+</body>
+</html>
