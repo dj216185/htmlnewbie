@@ -173,7 +173,119 @@
   </div>
 </section>
 
-<!-- Other sections remain the same -->
+<!-- 7 TABLES -->
+<section id="tables" class="mb-5">
+  <h2>7&nbsp;·&nbsp;Fantastic Tables <span>🍫</span></h2>
+  <p>Tables are like spreadsheets inside a web page.</p>
+  <div class="row">
+    <div class="col-lg-6">
+<pre class="language-html code-box"><code>&lt;table border="1"&gt;
+  &lt;caption&gt;Chocolate Scores&lt;/caption&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Brand&lt;/th&gt;
+    &lt;th&gt;Yum Score&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Dairy Wow&lt;/td&gt;&lt;td&gt;9&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Dark Blast&lt;/td&gt;&lt;td&gt;8&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+    </div>
+    <div class="col-lg-6 output-pane">
+      <table border="1">
+        <caption>Chocolate Scores</caption>
+        <tr><th>Brand</th><th>Yum&nbsp;Score</th></tr>
+        <tr><td>Dairy&nbsp;Wow</td><td>9</td></tr>
+        <tr><td>Dark&nbsp;Blast</td><td>8</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="didyouknow">
+    <strong>Did you know?</strong> You can add <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>
+    and <code>&lt;tfoot&gt;</code> parts to big tables so screen-readers understand them better.
+  </div>
+</section>
+
+<!-- 8 FORMS & ENTITIES -->
+<section id="forms" class="mb-5">
+  <h2>8&nbsp;·&nbsp;Talk to the Page (Forms) <span>📝</span></h2>
+  <p>With forms, people can send you information.</p>
+  <div class="row">
+    <div class="col-lg-6">
+<pre class="language-html code-box"><code>&lt;form&gt;
+  Name: &lt;input name="name" required&gt;&lt;br&gt;
+  Favourite emoji: &lt;input name="emoji" value="😎"&gt;&lt;br&gt;
+  &lt;button&gt;Send!&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+    </div>
+    <div class="col-lg-6 output-pane">
+      <form>
+        Name: <input name="name" required><br>
+        Favourite emoji: <input name="emoji" value="😎"><br>
+        <button>Send!</button>
+      </form>
+    </div>
+  </div>
+
+  <h5 class="mt-4">Character&nbsp;Entities (special symbols)</h5>
+  <p class="output-pane">
+    &amp;copy; → © &nbsp;&nbsp;
+    &amp;hearts; → ♥ &nbsp;&nbsp;
+    &amp;nbsp; → (non-breaking space)
+  </p>
+</section>
+
+<!-- 9 PLAYGROUND -->
+<section id="play" class="mb-5">
+  <h2>9&nbsp;·&nbsp;✨ Try It Yourself!</h2>
+  <p>Type any HTML below and click <strong>Run!</strong></p>
+  <textarea id="playInput" class="form-control" rows="6">&lt;h3&gt;I made this!&lt;/h3&gt;
+&lt;p&gt;Change the text then hit Run.&lt;/p&gt;</textarea>
+  <button class="mt-2 play-btn" onclick="runPlayground()">Run ▶️</button>
+  <div class="output-pane mt-3">
+    <iframe id="playFrame" style="width:100%;height:150px;border:0;"></iframe>
+  </div>
+</section>
+
+<!-- 10 QUIZ -->
+<section id="quiz">
+  <h2>10&nbsp;·&nbsp;Quick Quiz <span>🧠</span></h2>
+  <p>Choose the right answer, then press <strong>Check Answers</strong>.</p>
+
+  <form id="quizForm" class="mb-3">
+
+    <!-- Q1 -->
+    <p>1. Which tag makes bold/important text?</p>
+    <label><input type="radio" name="q1" value="A"> &lt;em&gt;</label><br>
+    <label><input type="radio" name="q1" value="B"> &lt;strong&gt;</label><br>
+    <label><input type="radio" name="q1" value="C"> &lt;img&gt;</label><br><br>
+
+    <!-- Q2 -->
+    <p>2. What tag wraps the part we see on the page?</p>
+    <label><input type="radio" name="q2" value="A"> &lt;head&gt;</label><br>
+    <label><input type="radio" name="q2" value="B"> &lt;body&gt;</label><br>
+    <label><input type="radio" name="q2" value="C"> &lt;title&gt;</label><br><br>
+
+    <!-- Q3 -->
+    <p>3. Which pair creates a numbered list?</p>
+    <label><input type="radio" name="q3" value="A"> &lt;ul&gt; &lt;/ul&gt;</label><br>
+    <label><input type="radio" name="q3" value="B"> &lt;ol&gt; &lt;/ol&gt;</label><br>
+    <label><input type="radio" name="q3" value="C"> &lt;li&gt; &lt;/li&gt;</label><br><br>
+
+    <!-- Q4 -->
+    <p>4. Inside a table, &lt;th&gt; stands for…?</p>
+    <label><input type="radio" name="q4" value="A"> Table Hero</label><br>
+    <label><input type="radio" name="q4" value="B"> Table Header</label><br>
+    <label><input type="radio" name="q4" value="C"> Tiny House</label><br><br>
+
+    <!-- Q5 -->
+    <p>5. Which tag links to another website?</p>
+    <label><input type="radio" name="q5" value="A"> &lt;a&gt;</label><br>
+    <label><input type="radio" name="q5" value="B"> &lt;link&gt;</label><br>
+    <label><input type="radio" name="q5" value="C"> &lt;href&gt;</label><br><br>
+
+    <button type="button" class="play-btn" onclick="checkQuiz()">Check Answers ✅</button>
+  </form>
+  <div id="quizResult" class="h4"></div>
+</section>
 
 </div><!-- /container -->
 
